@@ -70,3 +70,78 @@ a:hover {
     cursor : default; /* Le curseur ne change pas au survol du logo */
 }
 
+/*HAMBURGER MENU */
+
+#hamburger-nav {
+    display: none; /* Masquer le menu hamburger par défaut */
+}
+
+.hamburger-menu {
+    position: relative; /* Positionnement relatif pour le conteneur du menu hamburger */
+    display: inline-block; /* Affichage en ligne pour le menu hamburger */
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column; /* Disposition verticale des lignes */
+    justify-content: space-between; /* Espacement entre les lignes */
+    height: 24px; /* Hauteur totale de l'icône hamburger */
+    width: 30px; /* Largeur de l'icône hamburger */
+    cursor: pointer; /* Curseur en forme de main au survol */
+}
+
+.hamburger-icon span {
+    width: 100%; /* Largeur de chaque ligne */
+    height: 2px; /* Hauteur de chaque ligne */
+    background-color: black; /* Couleur des lignes */
+    transition: all 0.3s ease-in-out; /* Transition douce pour les animations */
+ }
+
+ .menu-links {
+    position: absolute; /* Positionnement absolu pour le menu déroulant */
+    top: 100%; /* Positionner le menu juste en dessous de l'icône hamburger */
+    right: 0; /* Aligner le menu à droite */
+    background-color: white; /* Couleur de fond du menu */
+    width: fit-content; /* Largeur automatique en fonction du contenu */
+    max-height: 0; /* Hauteur maximale initiale à 0 pour masquer le menu */
+    overflow: hidden; /* Masquer le contenu débordant */
+    transition: all 0.3s ease-in-out; /* Transition douce pour l'ouverture/fermeture du menu */
+ }
+
+ .menu-links a{
+    display: block; /* Affichage en bloc pour chaque lien */
+    padding: 10 px; /* Espacement interne des liens */
+    text-align: center; /* Centrer le texte des liens */
+    font-size: 1.5rem; /* Taille de la police des liens */
+    color: black; /* Couleur du texte des liens */
+    text-decoration: none; /* Pas de soulignement pour les liens */
+    transition: all 0.3s ease-in-out; /* Transition douce pour les liens */
+ }
+
+.menu-links li{
+    list-style: none; /* Supprimer les puces des éléments de liste */
+}
+
+.menu-links.open{
+    max-height: 300px; /* Hauteur maximale suffisante pour afficher le menu */
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px); /* Rotation et translation de la première ligne */
+}
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0; /* Rendre la deuxième ligne invisible */
+}
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px); /* Rotation et translation de la troisième ligne */
+}
+
+.hamburger-icon span:first-child{
+    transform:none; 
+}
+.hamburger-icon span:first-child{
+    opacity:1; 
+}
+.hamburger-icon span:first-child{
+    transform:none; 
+}
