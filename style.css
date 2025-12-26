@@ -279,6 +279,7 @@ section {
 .about-containers,
 .about-details-container {
     display: flex; 
+    gap: 2rem; /* Espacement entre les conteneurs */
 }
 
 .about-pic{
@@ -314,3 +315,119 @@ section {
 }
 
 
+/* EXPERIENCE SECTION */
+
+#experience {
+    position: relative;
+}
+
+.experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600; /* Poids de la police pour les sous-titres */
+    font-size: 1.75rem; /* Taille de la police pour les sous-titres */
+    margin-bottom: 2rem; /* Marge inférieure pour les sous-titres */
+}
+
+.experience-details-container {
+    display: flex;
+    justify-content: center; /* Centrer les conteneurs de détails horizontalement */
+    flex-direction: column; /* Disposition verticale des conteneurs de détails */
+}
+
+.article-container {
+    display: flex;
+    text-align: initial; /* Alignement du texte à gauche */
+    flex-wrap: wrap; /* Permet aux articles de passer à la ligne si nécessaire */
+    flex-direction: row; /* Disposition horizontale des articles */
+    gap: 2.5rem; /* Espacement entre les articles */
+    justify-content: space-around; /* Espacement uniforme autour des articles */
+}
+
+article {
+    display: flex;
+    width: 10rem; /* Largeur de chaque article */
+    justify-content: space-around; /* Espacement uniforme autour du contenu de chaque article */
+    gap: 0.5rem; /* Espacement entre l'icône et le texte dans chaque article */
+}
+
+article .icon{
+    cursor: default; /* Le curseur ne change pas au survol des icônes dans les articles */
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+    position: relative;
+}
+
+.color-container{
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+}
+
+.project-img {
+    border-radius: 2rem; /* Bords arrondis des images de projet */
+    width: 90%;
+    height: 90%;
+}
+
+.project-title {
+    margin: 1rem;
+    color: black;
+}
+
+.project-btn {
+    color: black;
+    border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT SECTION */
+
+#contact {
+    display: flex;
+    justify-content: center; /* Centrer le contenu horizontalement */
+    flex-direction: column; /* Disposition verticale du contenu */
+    height: 70vh;
+}
+
+.contact-info-upper-container{
+    display: flex;
+    justify-content: center; /* Centrer le contenu horizontalement */
+    border-radius: 2rem; /* Bords arrondis du conteneur supérieur des informations de contact */
+    border: rgb(53, 53, 53) 0.1rem solid; /* Bordure du conteneur supérieur des informations de contact */
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+    margin: 2rem auto; /* Marges supérieures et inférieures automatiques pour centrer verticalement */
+    padding: 0.5rem; /* Espacement interne du conteneur supérieur des informations de contact */
+}
+
+.contact-info-container{
+    display: flex;
+    justify-content: center; /* Centrer le contenu horizontalement */
+    align-items: center;
+    gap: 0.5rem; /* Espacement entre les éléments */
+    margin: 1rem;
+}
+
+.contact-info-container p{
+    font-size: larger;
+}
+
+.contact-icon{
+    cursor: default;
+}
+
+.email-icon{
+    height: 2.5rem; /* Hauteur de l'icône email */
+}
+
+/* FOOTER */
+
+footer{
+    height: 26vh;
+    margin: 0 1rem;
+}
+
+footer p{
+    text-align: center;
+}
