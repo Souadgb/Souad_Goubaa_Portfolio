@@ -145,3 +145,172 @@ a:hover {
 .hamburger-icon span:first-child{
     transform:none; 
 }
+
+/*SECTIONS*/
+
+section {
+    padding-top: 4vh; /* Espacement supérieur pour chaque section */
+    height: 96vh; /* Hauteur de chaque section */
+    margin: 0 10rem; /* Marges latérales pour chaque section */
+    box-sizing: border-box; /* Inclure les bordures et le padding dans la taille totale */
+    min-height: fit-content; /* Hauteur minimale en fonction du contenu */
+}
+
+.section-container{
+    display:flex;
+}
+
+/*PROFILE SECTION*/
+
+#profile {
+    display: flex;
+    justify-content: center; /* Centrer le contenu horizontalement */
+    gap: 5rem; /* Espacement entre les éléments */
+    height: 80vh; /* Hauteur de la section profil */
+}
+
+.section__pic-container {
+   display: flex;
+   height: 400px;
+    width: 400px;
+    margin: auto 0; /* Centrer verticalement l'image */
+}
+
+.section__text {
+    align-self: center; /* Centrer le texte verticalement */
+    text-align: center; /* Centrer le texte horizontalement */
+}
+
+.section__text p{
+    font-weight: 600; /* Poids de la police pour le texte de la section */
+}
+
+.section__text__p1 {
+     text-align: center;
+}
+.section__text__p2 {
+     font-size: 1.75rem;
+     margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem; /* Taille de la police pour les titres */
+    text-align: center;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center; /* Centrer les icônes horizontalement */
+    gap: 1rem; /* Espacement entre les icônes */
+    margin-top: 1rem; /* Marge supérieure pour le conteneur des réseaux sociaux */
+}
+
+/* ICONS */
+
+.icon {
+    cursor: pointer; /* Curseur en forme de main au survol des icônes */
+    height: 2rem; /* Hauteur des icônes */
+}
+
+/* BUTTONS */
+
+.btn-container{
+    display: flex;
+    justify-content: center; /* Centrer les boutons horizontalement */
+    gap: 1rem;
+}
+
+.btn{
+    font-weight: 600; /* Poids de la police pour les boutons */
+    transition: all 300ms ease; /* Transition douce pour les boutons */
+    padding: 1rem; /* Espacement interne des boutons */
+    width: 8rem; /* Largeur des boutons */
+    border-radius: 2rem; /* Bords arrondis des boutons */
+}
+
+.btn-color-1, 
+.btn-color-2 {
+    border: rgb(53, 53, 53) 0,1rem solid; /* Bordure des boutons */
+}
+
+.btn-color-1 :hover, 
+.btn-color-2 :hover {
+    cursor: pointer; /* Curseur en forme de main au survol des boutons */
+}
+
+.btn-color-1, 
+.btn-color-2:hover {
+    background: rgb(53, 53, 53); /* Couleur de fond des boutons au survol */
+    color: white; /* Couleur du texte des boutons au survol */
+}
+.btn-color-1:hover{
+    background: rgb(0, 0, 0);
+}
+
+.btn-color-2{
+    background: none; 
+}
+
+.btn-color-2:hover{
+    border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container{
+    gap: 1rem;
+}
+
+/* ABOUT SECTION */
+
+#about {
+    position: relative;
+}
+
+.about-container {
+    gap: 2rem; /* Espacement entre l'image et le texte */
+    margin-bottom: 2rem; /* Marge inférieure pour le conteneur about */
+    margin-top: 2rem; /* Marge supérieure pour le conteneur about */
+}
+
+.about-details-container {
+    justify-content: center; /* Centrer le texte horizontalement */
+    flex-direction: column; /* Disposition verticale du texte */
+}
+
+.about-containers,
+.about-details-container {
+    display: flex; 
+}
+
+.about-pic{
+    border-radius: 2rem; /* Bords arrondis de l'image about */
+}
+
+.arrow {
+    position: absolute; /* Positionnement absolu pour la flèche */
+    right: -5rem; /* Positionner la flèche à droite */
+    bottom: 2.5rem; /* Positionner la flèche en bas */
+
+}
+
+.details-container{
+    padding: 1.5rem; /* Espacement interne du conteneur des détails */
+    flex: 1;
+    background: white;
+    border-radius: 2rem; /* Bords arrondis du conteneur des détails */
+    border: rgb(53, 53, 53) 0.1rem solid; /* Bordure du conteneur des détails */
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}
+    
+.section-container {
+    gap: 4rem; /* Espacement entre les sections */  
+    height: 80%; /* Hauteur des sections */
+}
+
+.section__pic-container{
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+
