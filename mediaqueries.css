@@ -1,8 +1,107 @@
+
+
+
+@media screen and (max-width: 1400px) {
+    #profile {
+        height: 83vh; /* Ajuste la hauteur du profil pour les écrans plus petits */
+        margin-bottom: 6rem; /* Ajoute une marge inférieure pour l'espacement */
+    }
+    .about-containers{
+        flex-wrap: wrap; /* Permet aux conteneurs de s'enrouler sur les petits écrans */
+    }
+}
+
+
 @media screen and (max-width: 1200px) {
     #desktop-nav {
         display: none; /* Hide desktop navigation on smaller screens */
     }
     #hamburger-nav {
         display : flex; /* Montrer le menu hamburger sur les petits écrans */
+    }
+    #experience, 
+    .experience-details-container {
+        margin-top: 2rem; /* Ajoute une marge supérieure pour l'espacement */
+    }
+    #profile, 
+    .section-container {
+        display: block; /* Change le conteneur de profil en bloc pour les petits écrans */
+    }
+    .arrow{
+        display: none; /* Cacher les flèches de navigation sur les petits écrans */
+    }
+    section, 
+    .section-container {
+        height: fit-content; /* Ajuste la hauteur des sections pour s'adapter au contenu */
+    }
+    section {
+        margin: 0 5%; /* Ajoute des marges latérales pour l'espacement */
+    }
+    .section__pic-container {
+        width: 275px; /* Ajuste la largeur des images de section pour les petits écrans */
+        height: 275px; /* Ajuste la hauteur des images de section pour les petits écrans */
+        margin: 0 auto 2rem; /* Centre les images de section avec une marge inférieure */
+    }
+    .about-containers{
+        margin-top: 0; /* Réduit la marge supérieure des conteneurs "about" */
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    #contact, 
+    footer{
+        height: 40vh; /* Ajuste la hauteur de la section contact et du pied de page pour les très petits écrans */
+    }
+    #profile {
+        height: 83vh; /* Ajuste la hauteur du profil pour les très petits écrans */
+        margin-bottom: 0; /* Réduit la marge inférieure */
+    }
+
+    article {
+        font-size: 1rem; /* Ajuste la taille de la police des articles pour une meilleure lisibilité */
+    }
+
+    footer nav {
+        height: fit-content; /* Ajuste la hauteur de la navigation du pied de page pour s'adapter au contenu */
+        margin-bottom: 2rem; /* Ajoute une marge inférieure pour l'espacement */
+    }
+    .about-containers, 
+    .contact-info-upper-container, 
+    .btn-container {
+        flex-wrap: wrap; /* Permet aux conteneurs de s'enrouler sur les très petits écrans */
+    }
+    .contact-info-container{
+        margin: 0; /* Réduit les marges des conteneurs d'informations de contact */
+    }
+    .contact-info-container p, 
+    .nav-links li a{
+        font-size: 1rem; /* Ajuste la taille de la police des informations de contact et des liens de navigation pour une meilleure lisibilité */
+    }
+    .experience-sub-title{
+        font-size: 1.25rem; /* Ajuste la taille de la police des sous-titres d'expérience pour une meilleure lisibilité */
+    }
+    .logo{
+        font-size: 1.3rem; /* Ajuste la taille de la police du logo pour une meilleure lisibilité */    
+    }
+    .nav-links{
+        flex-direction: column; /* Change la direction des liens de navigation en colonne pour les très petits écrans */
+        gap: 0.5rem; /* Réduit l'espacement entre les liens de navigation */
+        text-align: center; /* Centre le texte des liens de navigation */
+    }
+
+    .section__pic-container {
+        width: auto; /* Ajuste la largeur des images de section pour les très petits écrans */
+        height: 46vw; /* Ajuste la hauteur des images de section pour les très petits écrans */
+        justify-content: center; /* Centre les images de section */
+    }
+    .section__text__p2{
+        font-size: 1.25rem; /* Ajuste la taille de la police des paragraphes secondaires pour une meilleure lisibilité */  
+    }
+    .title {
+        font-size: 2rem; /* Ajuste la taille de la police des titres pour une meilleure lisibilité */
+    }
+    .text-container {
+        text-align: justify; /* Justifie le texte dans les conteneurs de texte pour une meilleure lisibilité */
     }
 }
