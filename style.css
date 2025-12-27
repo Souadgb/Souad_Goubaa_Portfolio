@@ -176,6 +176,13 @@ section {
     margin: auto 0; /* Centrer verticalement l'image */
 }
 
+.profile-pfp {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+
 .section__text {
     align-self: center; /* Centrer le texte verticalement */
     text-align: center; /* Centrer le texte horizontalement */
