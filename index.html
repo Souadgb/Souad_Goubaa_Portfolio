@@ -6,24 +6,26 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="style-enhanced.css">
     <style>
         /* Language toggle button styles */
         .lang-toggle {
-            padding: 0.5rem 1rem;
-            border: 2px solid rgb(53, 53, 53);
-            background: rgb(53, 53, 53);
-            color: white;
-            cursor: pointer;
-            border-radius: 1.5rem;
-            font-weight: 600;
-            transition: all 300ms ease;
-            font-size: 0.9rem;
-            min-width: 50px;
-        }
-        .lang-toggle:hover {
-            background: rgb(85, 85, 85);
-            border-color: rgb(85, 85, 85);
-        }
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: transparent;
+    color: #4a4a4a;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.lang-toggle:hover {
+    background: #8d8c8c;
+    border-color: #1a1a1a;
+    color: #000000;
+}
         /* Desktop nav styles */
         #desktop-nav .nav-container {
             display: flex;
@@ -37,6 +39,9 @@
     </style>
 </head>
 <body>
+    <!-- Indicateur de progression de scroll -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
     <nav id="desktop-nav">
        <div class="logo">Souad Goubaa</div> 
        <div class="nav-container">
@@ -268,7 +273,7 @@
                 </div>
                 <h2 class="experience-sub-title project-title" data-i18n="project-1-title">Trading algorithmique - machine learning</h2>
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Souadgb/Algorithmic-Trading-Machine-Learning'" data-i18n="btn-github">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Souadgb'" data-i18n="btn-github">
                         GitHub
                     </button>
                     <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Souadgb'" data-i18n="btn-details">

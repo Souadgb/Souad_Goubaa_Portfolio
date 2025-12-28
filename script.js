@@ -134,3 +134,83 @@ function toggleLanguage() {
 window.addEventListener('DOMContentLoaded', () => {
     switchLanguage(currentLang);
 });
+
+// Indicateur de progression de scroll
+window.addEventListener('scroll', () => {
+    const scrollProgress = document.getElementById('scrollProgress');
+    const scrollTotal = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPosition = window.scrollY;
+    const progress = (scrollPosition / scrollTotal) * 100;
+    scrollProgress.style.width = progress + '%';
+});
+
+
+//  ANIMATIONS AU SCROLL POUR MOBILE 
+if (window.innerWidth <= 1200) {
+    // Intersection Observer pour détecter les éléments visibles
+    const observerOptions = {
+        threshold: 0.15, // L'élément doit être visible à 15%
+        rootMargin: '0px 0px -50px 0px' // Déclenche un peu avant qu'il soit complètement visible
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Une fois visible, on arrête d'observer (animation une seule fois)
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // Observer tous les éléments qui doivent s'animer
+    const animateOnScroll = document.querySelectorAll(
+        '.details-container, .color-container, article, .title, .section__text__p1, .profile-pfp, section'
+    );
+    
+    animateOnScroll.forEach(el => {
+        observer.observe(el);
+    });
+    
+    // Animation spéciale pour la première section (profile) - visible immédiatement
+    setTimeout(() => {
+        const profileSection = document.querySelector('#profile');
+        const profileElements = profileSection.querySelectorAll('.title, .section__text__p1, .profile-pfp');
+        
+        profileSection.classList.add('visible');
+        profileElements.forEach(el => {
+            el.classList.add('visible');
+        });
+    }, 100);
+}
+
+// Smooth scroll amélioré pour mobile
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Fermer le menu hamburger si ouvert
+            const menu = document.querySelector(".menu-links");
+            const icon = document.querySelector(".hamburger-icon");
+            if (menu.classList.contains('open')) {
+                menu.classList.remove('open');
+                icon.classList.remove('open');
+            }
+        }
+    });
+});
+
+// Feedback haptique subtil sur les boutons (si supporté)
+if ('vibrate' in navigator && window.innerWidth <= 1200) {
+    document.querySelectorAll('.btn, .icon, .lang-toggle').forEach(element => {
+        element.addEventListener('touchstart', () => {
+            navigator.vibrate(10); // Vibration très légère de 10ms
+        });
+    });
+}
