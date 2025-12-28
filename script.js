@@ -18,7 +18,7 @@ const translations = {
         // Profile section
         'profile-hello': "Hello, I'm",
         'profile-role': 'Software Engineering Student',
-        'btn-cv': 'Download CV',
+        'btn-cv': 'CV',
         'btn-contact': 'Contact Me',
         
         // About section
@@ -64,7 +64,7 @@ const translations = {
         // Profile section
         'profile-hello': 'Bonjour, je suis',
         'profile-role': 'Étudiante en génie logiciel',
-        'btn-cv': 'Télécharger CV',
+        'btn-cv': 'CV',
         'btn-contact': 'Me contacter',
         
         // About section
