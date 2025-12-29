@@ -122,12 +122,61 @@ function switchLanguage(lang) {
     document.querySelectorAll('.lang-toggle').forEach(btn => {
         btn.textContent = lang === 'fr' ? 'EN' : 'FR';
     });
+    
+    // Mettre à jour les boutons de détails des projets
+    document.querySelectorAll('.project-details-btn').forEach(btn => {
+        const card = btn.closest('[data-project-id]');
+        if (card) {
+            const imageView = card.querySelector('.project-image-view');
+            
+            if (imageView.classList.contains('hidden')) {
+                // Vue texte active - afficher "Retour" ou "Back"
+                btn.textContent = lang === 'fr' ? 'Retour' : 'Back';
+            } else {
+                // Vue image active - afficher "Détails" ou "Details"
+                btn.textContent = lang === 'fr' ? 'Détails' : 'Details';
+            }
+        }
+    });
 }
 
 // Function to toggle between languages
 function toggleLanguage() {
     const newLang = currentLang === 'fr' ? 'en' : 'fr';
     switchLanguage(newLang);
+}
+
+// Fonction pour basculer entre la vue image et texte des projets
+function toggleProjectView(projectId) {
+    const card = document.querySelector(`[data-project-id="${projectId}"]`);
+    const imageView = card.querySelector('.project-image-view');
+    const textView = card.querySelector('.project-text-view');
+    const detailsBtn = card.querySelector('.project-details-btn');
+    
+    // Basculer les vues
+    if (imageView.classList.contains('hidden')) {
+        // Retour à la vue image
+        imageView.classList.remove('hidden');
+        textView.classList.remove('active');
+        
+        // Mettre à jour le texte du bouton
+        if (currentLang === 'fr') {
+            detailsBtn.textContent = 'Détails';
+        } else {
+            detailsBtn.textContent = 'Details';
+        }
+    } else {
+        // Passer à la vue texte
+        imageView.classList.add('hidden');
+        textView.classList.add('active');
+        
+        // Mettre à jour le texte du bouton
+        if (currentLang === 'fr') {
+            detailsBtn.textContent = 'Retour';
+        } else {
+            detailsBtn.textContent = 'Back';
+        }
+    }
 }
 
 // Initialize language on page load
