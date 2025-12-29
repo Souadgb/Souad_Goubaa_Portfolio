@@ -46,6 +46,8 @@ const translations = {
         'project-3-title': 'Pokedex<br>-',
         'btn-github': 'GitHub',
         'btn-details': 'Details',
+        'learning-title': 'Currently learning',
+
         //dot nav
         'dot-profile': 'Profile',
         'dot-about': 'About',
@@ -98,6 +100,8 @@ const translations = {
         'project-3-title': 'Pokedex<br>-',
         'btn-github': 'GitHub',
         'btn-details': 'Détails',
+        'learning-title': 'Actuellement en apprentissage',
+
         
         // Contact section
         'contact-reach': 'Me joindre',
