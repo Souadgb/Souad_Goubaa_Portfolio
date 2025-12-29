@@ -13,10 +13,72 @@
 }
 
 body {
-    background: #fafafa;
-    color: #1a1a1a;
-    animation: fadeIn 0.4s ease-in;
-}
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+            color: #1a1a1a;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Improved animated background */
+        .background-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(180deg, #fafafa 0%, #f5f5f3 100%);
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0;
+            animation: fadeIn 2s ease-out forwards, float 20s ease-in-out infinite;
+        }
+
+        .blob-1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(250, 152, 25, 0.35) 0%, rgba(250, 152, 25, 0) 70%);
+            top: 10%;
+            right: 10%;
+            animation-delay: 0s;
+        }
+
+        .blob-2 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(182, 201, 207, 0.4) 0%, rgba(182, 201, 207, 0) 70%);
+            bottom: 20%;
+            left: 5%;
+            animation-delay: 0.5s;
+        }
+
+        .blob-3 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(250, 152, 25, 0.25) 0%, rgba(250, 152, 25, 0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: 1s;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            33% { transform: translate(30px, -30px); }
+            66% { transform: translate(-20px, 20px); }
+        }
+
+        
+
 
 html {
     scroll-behavior: smooth;
@@ -30,6 +92,92 @@ a, button {
 ::selection {
     background: #1a1a1a;
     color: #ffffff;
+}
+/* Side dot nav  */
+.side-dot-nav {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 0.75rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(250, 250, 250, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.side-dot-nav .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(26, 26, 26, 0.28);
+  transition: transform 0.2s ease, background 0.2s ease;
+  position: relative;
+}
+
+.side-dot-nav .dot:hover {
+  transform: scale(1.2);
+  background: rgba(26, 26, 26, 0.45);
+}
+
+.side-dot-nav .dot.active {
+  background: rgba(26, 26, 26, 0.9);
+  transform: scale(1.15);
+}
+
+/* subtlering on active dot */
+.side-dot-nav .dot.active::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 999px;
+  border: 1px solid rgba(26, 26, 26, 0.18);
+}
+/*  Dot hover labels  */
+.side-dot-nav .dot::before {
+  content: attr(data-label);
+  position: absolute;
+  right: 18px;              /* label appears to the left of dots */
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgba(26, 26, 26, 0.9);
+  background: rgba(250, 250, 250, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.side-dot-nav .dot:hover::before {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-4px);
+}
+
+/* also show label for the active dot when hovering near it */
+.side-dot-nav .dot.active:hover::before {
+  opacity: 1;
+}
+
+
+/* Hide on smaller screens */
+@media screen and (max-width: 900px) {
+  .side-dot-nav {
+    display: none;
+  }
 }
 
 /*  ANIMATIONS KEYFRAMES  */

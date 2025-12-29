@@ -39,8 +39,27 @@
     </style>
 </head>
 <body>
+    <!-- Static background blobs -->
+<!-- Static blob background -->
+<div class="background-canvas" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+
     <!-- Indicateur de progression de scroll -->
     <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Side dot navigation -->
+<nav class="side-dot-nav" aria-label="Section navigation">
+<a class="dot" href="#profile" data-dot="profile" data-label="Profil" data-i18n-label="dot-profile" aria-label="Profile"></a>
+<a class="dot" href="#about" data-dot="about" data-label="À propos" data-i18n-label="dot-about" aria-label="About"></a>
+<a class="dot" href="#experience" data-dot="experience" data-label="Expérience" data-i18n-label="dot-experience" aria-label="Experience"></a>
+<a class="dot" href="#projects" data-dot="projects" data-label="Projets" data-i18n-label="dot-projects" aria-label="Projects"></a>
+<a class="dot" href="#contact" data-dot="contact" data-label="Contact" data-i18n-label="dot-contact" aria-label="Contact"></a>
+</nav>
+
     
     <nav id="desktop-nav">
        <div class="logo">Souad Goubaa</div> 
@@ -141,12 +160,7 @@
                 </div>
             </div>
         </div>
-        <img 
-        src="./assets/arrow.png" 
-        alt="Arrow icon" 
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-        />
+        
     </section>
     
     <section id="experience">
@@ -250,12 +264,7 @@
                 </div>
             </div>
         </div>
-        <img 
-        src="./assets/arrow.png" 
-        alt="Arrow icon" 
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-        />
+        
     </section>
     
     <section id="projects">
@@ -419,12 +428,7 @@
 </div>
             </div>
         </div>
-        <img 
-        src="./assets/arrow.png" 
-        alt="Arrow icon" 
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-        />
+        
     </section>
     
     <section id="contact">

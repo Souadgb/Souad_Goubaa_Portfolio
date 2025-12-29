@@ -46,7 +46,13 @@ const translations = {
         'project-3-title': 'Pokedex<br>-',
         'btn-github': 'GitHub',
         'btn-details': 'Details',
-        
+        //dot nav
+        'dot-profile': 'Profile',
+        'dot-about': 'About',
+        'dot-experience': 'Experience',
+        'dot-projects': 'Projects',
+        'dot-contact': 'Contact',
+
         // Contact section
         'contact-reach': 'Get In Touch',
         'contact-title': 'Contact Me',
@@ -96,6 +102,14 @@ const translations = {
         // Contact section
         'contact-reach': 'Me joindre',
         'contact-title': 'Contactez moi',
+
+        //dot nav
+        'dot-profile': 'Profil',
+        'dot-about': 'À propos',
+        'dot-experience': 'Expérience',
+        'dot-projects': 'Projets',
+        'dot-contact': 'Contact',
+
         
         // Footer
         'footer-copyright': 'Copyright © 2026 Souad Goubaa. Tous droits réservés.'
@@ -117,6 +131,15 @@ function switchLanguage(lang) {
             element.innerHTML = translations[lang][key];
         }
     });
+
+    // Update dot nav hover labels (data-label)
+        document.querySelectorAll('[data-i18n-label]').forEach(el => {
+        const key = el.getAttribute('data-i18n-label');
+        if (translations[lang][key]) {
+            el.dataset.label = translations[lang][key];
+        }
+        });
+
     
     // Update language toggle button text
     document.querySelectorAll('.lang-toggle').forEach(btn => {
@@ -263,3 +286,35 @@ if ('vibrate' in navigator && window.innerWidth <= 1200) {
         });
     });
 }
+
+//  Side dot nav: highlight current section 
+window.addEventListener("DOMContentLoaded", () => {
+  const sections = ["profile", "about", "experience", "projects", "contact"];
+  const dots = document.querySelectorAll(".side-dot-nav .dot");
+
+  if (!dots.length) return;
+
+  const setActive = (id) => {
+    dots.forEach((d) => d.classList.toggle("active", d.dataset.dot === id));
+  };
+
+  // Default active on load
+  setActive("profile");
+
+  // Use IntersectionObserver for accurate section detection
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) setActive(entry.target.id);
+      });
+    },
+    {
+      threshold: 0.35, // how much of section must be visible to count as "active"
+    }
+  );
+
+  sections.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+});
