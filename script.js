@@ -25,9 +25,9 @@ const translations = {
         'about-learn': 'Learn More',
         'about-title': 'About Me',
         'about-exp-title': 'Experience',
-        'about-exp-desc': '1+ Year<br/>Frontend Developer',
+        'about-exp-desc': '7+ Projects<br/>&<br/>Hackathons',
         'about-edu-title': 'Education',
-        'about-edu-desc': 'University Path in Technology<br/>Bachelor in Software Engineering',
+        'about-edu-desc': 'University Path in Technology (2024) <br/>Bachelor in Software Engineering (2025-present)',
         'about-text': 'Passionate software engineering student with a strong foundation in frontend and backend development. I love creating intuitive user interfaces and solving complex problems through code.',
         
         // Experience section
@@ -79,9 +79,9 @@ const translations = {
         'about-learn': 'En savoir plus',
         'about-title': 'À propos de moi',
         'about-exp-title': 'Expérience',
-        'about-exp-desc': '1+ Année<br/>Frontend Developer',
+        'about-exp-desc': '7+ Projets<br/>&</br/>Hackathons',
         'about-edu-title': 'Éducation',
-        'about-edu-desc': 'Cheminement Universitaire en Technologie<br/>Baccalauréat en génie logiciel',
+        'about-edu-desc': 'Cheminement Universitaire en Technologie (2024) <br/>Baccalauréat en génie logiciel (2025-present)',
         'about-text': 'Étudiante passionnée en génie logiciel avec une solide base en développement frontend et backend. J\'adore créer des interfaces utilisateur intuitives et résoudre des problèmes complexes par le code.',
         
         // Experience section
@@ -91,6 +91,8 @@ const translations = {
         'exp-backend': 'Backend',
         'exp-experienced': 'Expérimenté',
         'exp-basic': 'Basique',
+        'learning-title': 'Actuellement en apprentissage',
+
         
         // Projects section
         'projects-recent': 'Mes projets récents',
@@ -100,8 +102,7 @@ const translations = {
         'project-3-title': 'Pokedex<br>-',
         'btn-github': 'GitHub',
         'btn-details': 'Détails',
-        'learning-title': 'Actuellement en apprentissage',
-
+        
         
         // Contact section
         'contact-reach': 'Me joindre',
