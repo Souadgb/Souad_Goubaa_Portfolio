@@ -48,6 +48,33 @@ const translations = {
         'btn-details': 'Details',
         'learning-title': 'Currently learning',
 
+        // project details
+
+        //project 1
+        'project-tech-title': 'Technologies',
+        'project-features-title': 'Key Features',
+        'project-1-desc': 'Algorithmic trading project built in Jupyter Notebook, focused on quantitative market analysis. Implements technical indicators and tests trading strategies in Python.',
+        'project-1-feature-1': 'Market data analysis & preprocessing',
+        'project-1-feature-2': 'Technical indicators (e.g., RSI) + feature engineering',
+        'project-1-feature-3': 'Strategy testing / evaluation (backtesting mindset)',
+
+        //project 2 
+        'project-survivalkit-title': 'SurvivalKit — iOS App (Hackathon)',
+        'project-survivalkit-desc': 'Mobile app built in 24 hours during a hackathon: context-aware emergency recommendations powered by geolocation and AI. Fast, action-oriented user experience.',
+        'project-survivalkit-feature-1': 'Geolocation + map to find nearby resources',
+        'project-survivalkit-feature-2': 'AI-assisted recommendations based on the user’s context and needs',
+        'project-survivalkit-feature-3': 'Smooth iOS experience (React Native + Expo) with polished UI',
+
+
+        //project 3
+        'project-pokedex-title': 'Pokedex — Android Application',
+        'project-pokedex-desc': 'Android Pokédex application using PokeAPI and a local SQLite database. Browse Pokémon, view detailed profiles, and manage favorites.',
+        'project-pokedex-feature-1': 'Dynamic Pokémon list fetched from PokeAPI',
+        'project-pokedex-feature-2': 'Detailed Pokémon profile (types, height, weight, image)',
+        'project-pokedex-feature-3': 'Favorites management with local persistence (SQLite)',
+
+
+
         //dot nav
         'dot-profile': 'Profile',
         'dot-about': 'About',
@@ -102,6 +129,32 @@ const translations = {
         'project-3-title': 'Pokedex<br>-',
         'btn-github': 'GitHub',
         'btn-details': 'Détails',
+
+        // project details
+
+            //Projet 1
+        'project-tech-title': 'Technologies',
+        'project-features-title': 'Fonctionnalités clés',
+        'project-1-desc': 'Projet de trading algorithmique développé sur Jupyter Notebook, axé sur l’analyse quantitative des marchés. Implémentation d’indicateurs techniques et tests de stratégies en Python.',
+        'project-1-feature-1': 'Analyse et préparation de données de marché',
+        'project-1-feature-2': 'Indicateurs techniques (ex. RSI) + features',
+        'project-1-feature-3': 'Tests et évaluation de stratégies (logique backtesting)',
+
+            //Projet 2
+        'project-survivalkit-title': 'SurvivalKit — App iOS (Hackathon)',
+        'project-survivalkit-desc': "Application mobile créée en 24h lors d’un hackathon : recommandations contextualisées en situation d’urgence grâce à la géolocalisation et l’IA. Interface rapide et orientée action.",
+        'project-survivalkit-feature-1': 'Géolocalisation et carte pour repérer des ressources à proximité',
+        'project-survivalkit-feature-2': 'Recommandations assistées par IA selon le contexte (besoin / situation)',
+        'project-survivalkit-feature-3': 'Expérience iOS fluide (React Native + Expo) avec UI optimisée',
+
+            //project 3
+        'project-pokedex-title': 'Pokédex — Application Android',
+        'project-pokedex-desc': 'Application Pokédex Android utilisant PokeAPI et une base de données SQLite. Consultation des Pokémon, fiche détaillée et gestion des favoris.',
+        'project-pokedex-feature-1': 'Liste des Pokémon récupérés dynamiquement via PokeAPI',
+        'project-pokedex-feature-2': 'Fiche détaillée d’un Pokémon (types, taille, poids, image)',
+        'project-pokedex-feature-3': 'Gestion des favoris avec persistance locale (SQLite)',
+
+
         
         
         // Contact section
@@ -323,3 +376,4 @@ window.addEventListener("DOMContentLoaded", () => {
     if (el) observer.observe(el);
   });
 });
+
