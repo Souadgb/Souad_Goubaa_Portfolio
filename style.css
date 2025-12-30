@@ -42,7 +42,7 @@ body {
         .blob-1 {
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(250, 152, 25, 0.35) 0%, rgba(250, 152, 25, 0) 70%);
+            background: radial-gradient(circle, rgba(135, 175, 235, 0.631) 0%, rgba(250, 152, 25, 0) 70%);
             top: 10%;
             right: 10%;
             animation-delay: 0s;
@@ -51,7 +51,7 @@ body {
         .blob-2 {
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(182, 201, 207, 0.4) 0%, rgba(182, 201, 207, 0) 70%);
+            background: radial-gradient(circle, rgba(136, 202, 213, 0.346) 0%, rgba(182, 201, 207, 0) 99%);
             bottom: 20%;
             left: 5%;
             animation-delay: 0.5s;
@@ -60,7 +60,7 @@ body {
         .blob-3 {
             width: 400px;
             height: 400px;
-            background: radial-gradient(circle, rgba(250, 152, 25, 0.25) 0%, rgba(250, 152, 25, 0) 70%);
+            background: radial-gradient(circle, rgba(97, 178, 225, 0.693) 0%, rgba(250, 152, 25, 0) 70%);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -807,7 +807,7 @@ article div p {
 .learning-section {
   background: linear-gradient(
     135deg,
-    rgba(250, 152, 25, 0.10) 0%,
+    rgba(126, 190, 235, 0.1) 0%,
     rgba(182, 201, 207, 0.10) 100%
   );
   padding: 2rem;
