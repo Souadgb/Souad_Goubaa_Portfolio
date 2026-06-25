@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Souad Goubaa - Portfolio</title>
+    <meta name="description" content="Portfolio de Souad Goubaa, étudiante en génie logiciel à l'ÉTS. Projets, expériences et implications étudiantes en développement frontend et backend.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Souad Goubaa - Portfolio">
+    <meta property="og:description" content="Portfolio de Souad Goubaa, étudiante en génie logiciel à l'ÉTS. Projets, expériences et implications étudiantes en développement frontend et backend.">
+    <meta property="og:url" content="https://souadgb.github.io/Souad_Goubaa_Portfolio/">
+    <meta property="og:image" content="https://souadgb.github.io/Souad_Goubaa_Portfolio/assets/profile-pic.png">
     <link rel="icon" type="image/png" href="./assets/favicon.png">
     <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="mediaqueries.css">
@@ -137,17 +143,27 @@
         <div class="section-container">
             <div class="section__pic-container">
                 <img 
-                src="./assets/about-pic.png" 
-                alt="Profile picture" 
+                src="./assets/about-pic.png"
+                alt="Profile picture"
                 class="about-pic"
+                loading="lazy"
                 />
             </div>
             <div class="about-details-container">
                 <div class="about-containers">
                     <div class="details-container">
                         <img src="./assets/experience.png" alt="experience icon" class="icon"/>
-                        <h3 data-i18n="about-exp-title">Expérience</h3>
-                        <p data-i18n="about-exp-desc">1+ Année<br/>Frontend Developer</p>
+                        <h3 data-i18n="about-exp-title">Implications étudiantes</h3>
+                        <ul class="involvement-list">
+                            <li>
+                                <p class="involvement-role" data-i18n="about-exp-role-1">Membre administratif</p>
+                                <p class="involvement-club" data-i18n="about-exp-club-1">AppIETS · 8 mois</p>
+                            </li>
+                            <li>
+                                <p class="involvement-role" data-i18n="about-exp-role-2">Analyste en performance économique</p>
+                                <p class="involvement-club" data-i18n="about-exp-club-2">AlgoÉTS · 6 mois</p>
+                            </li>
+                        </ul>
                     </div>
                     <div class="details-container">
                         <img src="./assets/education.png" alt="education icon" class="icon"/>
@@ -155,12 +171,17 @@
                         <p data-i18n="about-edu-desc">Cheminement Universitaire en Technologie<br/>Baccalauréat en génie logiciel</p>
                     </div>
                 </div>
+                <div class="details-container stage-container">
+                    <img src="./assets/stage.png" alt="stage icon" class="icon"/>
+                    <h3 data-i18n="about-stage-title">Stage chez Centris</h3>
+                    <p data-i18n="about-stage-desc">Stage en développement logiciel chez Centris, travaillant sur deux applications mobiles B2B et B2C avec C#, Flutter et Dart. Contribution au développement et à la maintenance de fonctionnalités, collaboration avec l'équipe sur des projets concrets, et acquisition d'une expérience pratique des workflows et technologies de développement modernes.</p>
+                </div>
                 <div class="text-container">
                     <p data-i18n="about-text">Étudiante passionnée en génie logiciel avec une solide base en développement frontend et backend. J'adore créer des interfaces utilisateur intuitives et résoudre des problèmes complexes par le code.</p>
                 </div>
             </div>
         </div>
-        
+
     </section>
     
     <section id="experience">
@@ -235,7 +256,7 @@
                         <article>
                             <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
                             <div>
-                                <h3>C</h3>
+                                <h3>C#</h3>
                                 <p data-i18n="exp-basic">Basique</p>
                             </div>
                         </article>
@@ -300,9 +321,10 @@
         <div class="project-image-view">
             <div class="article-container">
                 <img 
-                src="assets/project-1.png" 
-                alt="Project 1" 
+                src="assets/project-1.png"
+                alt="Project 1"
                 class="project-img"
+                loading="lazy"
                 />
             </div>
             <h2 class="experience-sub-title project-title" data-i18n="project-1-title">Trading algorithmique - machine learning</h2>
@@ -361,9 +383,10 @@
         <div class="project-image-view">
             <div class="article-container">
                 <img 
-                src="assets/project-2.png" 
-                alt="Project 2" 
+                src="assets/project-2.png"
+                alt="Project 2"
                 class="project-img"
+                loading="lazy"
                 />
             </div>
             <h2 class="experience-sub-title project-title" data-i18n="project-survivalkit-title">SurvivalKit</h2>
@@ -426,9 +449,10 @@
         <div class="project-image-view">
             <div class="article-container">
                 <img 
-                src="assets/project-3.png" 
-                alt="Project 3" 
+                src="assets/project-3.png"
+                alt="Project 3"
                 class="project-img"
+                loading="lazy"
                 />
             </div>
             <h2 class="experience-sub-title project-title" data-i18n="project-3-title">Pokedex</h2>
