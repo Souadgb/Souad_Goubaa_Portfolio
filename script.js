@@ -24,11 +24,16 @@ const translations = {
         // About section
         'about-learn': 'Learn More',
         'about-title': 'About Me',
-        'about-exp-title': 'Experience',
-        'about-exp-desc': '7+ Projects<br/>&<br/>Hackathons',
+        'about-exp-title': 'Student Involvement',
+        'about-exp-role-1': 'Administrative Member',
+        'about-exp-club-1': 'AppIETS · 8 months',
+        'about-exp-role-2': 'Economic Performance Analyst',
+        'about-exp-club-2': 'AlgoÉTS · 6 months',
         'about-edu-title': 'Education',
         'about-edu-desc': 'University Path in Technology (2024) <br/>Bachelor in Software Engineering (2025-present)',
         'about-text': 'Passionate software engineering student with a strong foundation in frontend and backend development. I love creating intuitive user interfaces and solving complex problems through code.',
+        'about-stage-title': 'Internship at Centris',
+        'about-stage-desc': 'Software development internship at Centris, working on two B2B and B2C mobile applications using C#, Flutter and Dart. Contributing to the development and maintenance of features, collaborating with the team on real-world projects, and gaining hands-on experience with modern development workflows and technologies.',
         
         // Experience section
         'exp-explore': 'Explore My',
@@ -105,11 +110,16 @@ const translations = {
         // About section
         'about-learn': 'En savoir plus',
         'about-title': 'À propos de moi',
-        'about-exp-title': 'Expérience',
-        'about-exp-desc': '7+ Projets<br/>&</br/>Hackathons',
+        'about-exp-title': 'Implications étudiantes',
+        'about-exp-role-1': 'Membre administratif',
+        'about-exp-club-1': 'AppIETS · 8 mois',
+        'about-exp-role-2': 'Analyste en performance économique',
+        'about-exp-club-2': 'AlgoÉTS · 6 mois',
         'about-edu-title': 'Éducation',
         'about-edu-desc': 'Cheminement Universitaire en Technologie (2024) <br/>Baccalauréat en génie logiciel (2025-present)',
         'about-text': 'Étudiante passionnée en génie logiciel avec une solide base en développement frontend et backend. J\'adore créer des interfaces utilisateur intuitives et résoudre des problèmes complexes par le code.',
+        'about-stage-title': 'Stage - Centris',
+        'about-stage-desc': 'Stage en développement logiciel chez Centris, travaillant sur deux applications mobiles B2B et B2C avec C#, Flutter et Dart. Contribution au développement et à la maintenance de fonctionnalités, collaboration avec l\'équipe sur des projets concrets, et acquisition d\'une expérience pratique des workflows et technologies de développement modernes.',
         
         // Experience section
         'exp-explore': 'Explorez Mes',
