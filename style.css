@@ -211,7 +211,7 @@ a, button {
     letter-spacing: -0.02em;
     color: #1a1a1a;
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 3.5rem;
 }
 
 .section__text__p1 {
@@ -398,6 +398,7 @@ a {
 
 section {
     padding-top: 6vh;
+    padding-bottom: 4rem;
     height: 96vh;
     margin: 0 10rem;
     box-sizing: border-box;
@@ -575,6 +576,10 @@ article:hover .icon {
     position: relative;
 }
 
+#about .section-container {
+    padding-top: 1.5rem;
+}
+
 .about-containers,
 .about-details-container {
     display: flex;
@@ -611,6 +616,55 @@ article:hover .icon {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+.details-container > h3 {
+    display: inline-block;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+.involvement-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+}
+
+.involvement-list li {
+    position: relative;
+    padding-left: 1.1rem;
+}
+
+.involvement-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: rgba(0, 0, 0, 0.35);
+}
+
+.involvement-role {
+    color: #1a1a1a;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.involvement-club {
+    font-size: 0.875rem;
+    color: #777;
+    line-height: 1.4;
+}
+
+.stage-container {
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+.stage-container .icon {
+    display: block;
+    margin-bottom: 0.75rem;
 }
 
 .color-container {
